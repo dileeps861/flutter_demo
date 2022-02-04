@@ -19,12 +19,14 @@ fi
 
 #flutter precache
 #flutter doctor
+ echo "Before flutter create"
 flutter create .
 if [ "$1" == "release" ]; then
   flutter analyze
 else
     flutter analyze
 fi
+echo "Before flutter test"
 flutter test
 result=$?
 if $result != 0; then
