@@ -12,14 +12,14 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 echo "Build start"
-if ! command which flutter &> /dev/null
-then
+#if ! command which flutter &> /dev/null
+#then
   echo "Before git clone"
    git clone https://github.com/flutter/flutter.git -b stable
     echo "Before export path"
    export PATH="$PATH:./flutter/bin"
     echo "After export path"
-fi
+#fi
 if [ "$1" == "release" ]; then
   echo "Build if"
 else
