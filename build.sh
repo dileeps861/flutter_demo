@@ -17,7 +17,7 @@ echo "Build start"
   echo "Before git clone"
    git clone https://github.com/flutter/flutter.git -b stable
     echo "Before export path"
-   export PATH="$PATH:./flutter/bin"
+   export PATH="$PATH:./../flutter/bin"
     echo "After export path"
 #fi
 if [ "$1" == "release" ]; then
@@ -26,8 +26,9 @@ else
   echo "Build else"
 fi
 pwd
-flutter create .
 #flutter analyze
 flutter test
+result=$?
+echo "Test result= $result"
 #flutter test
 echo "Build end"
