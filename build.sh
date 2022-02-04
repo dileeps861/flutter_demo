@@ -25,7 +25,9 @@ if [ "$1" == "release" ]; then
 else
   echo "Build else"
 fi
-flutter analyze
+pwd
+flutter create .
+//flutter analyze
 flutter test
 #flutter test
 echo "Build end"
