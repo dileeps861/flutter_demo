@@ -14,7 +14,9 @@ set -e
 if ! command which flutter &> /dev/null
 then
    git clone https://github.com/flutter/flutter.git -b stable
+    echo "Before export path"
    export PATH="$PATH:./flutter/bin"
+    echo "After export path"
 fi
 
 #flutter precache
