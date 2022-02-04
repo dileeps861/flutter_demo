@@ -20,11 +20,11 @@ fi
 flutter precache
 flutter doctor
 flutter create .
-if [ "$1" == "release" ]; then
-  flutter analyze
-else
-    flutter analyze
-fi
+#if [ "$1" == "release" ]; then
+#  flutter analyze
+#else
+#    flutter analyze
+#fi
 flutter test
 result=$?
 if $result != 0; then
