@@ -11,6 +11,7 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
+  echo "Before git clone"
 if ! command which flutter &> /dev/null
 then
   echo "Before git clone"
@@ -23,14 +24,14 @@ fi
 #flutter precache
 #flutter doctor
  echo "Before flutter create"
-flutter create .
-if [ "$1" == "release" ]; then
-  flutter analyze
-else
-    flutter analyze
-fi
-echo "Before flutter test"
-flutter test
+#flutter create .
+#if [ "$1" == "release" ]; then
+#  flutter analyze
+#else
+#    flutter analyze
+#fi
+#echo "Before flutter test"
+#flutter test
 #result=$?
 #if $result != 0; then
 #  echo "Failed some test cases"
