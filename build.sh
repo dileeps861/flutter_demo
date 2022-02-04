@@ -16,10 +16,14 @@ echo "Build start"
 #then
   echo "Before git clone"
   cd ..
+  pwd
    git clone https://github.com/flutter/flutter.git -b stable
     echo "Before export path"
+    pwd
    export PATH="$PATH:./flutter/bin"
+   pwd
    cd kokoro-codelab-dileepshah
+   pwd
     echo "After export path"
 #fi
 if [ "$1" == "release" ]; then
