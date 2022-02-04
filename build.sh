@@ -12,8 +12,8 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 git clone https://github.com/flutter/flutter.git -b stable
-flutter precache
 export PATH="$PATH:./flutter/bin"
+flutter precache
 flutter doctor
 flutter create .
 if [ "$1" == "release" ]; then
