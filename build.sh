@@ -11,30 +11,11 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-  echo "Before git clone"
-if ! command which flutter &> /dev/null
-then
-  echo "Before git clone"
-   git clone https://github.com/flutter/flutter.git -b stable
-    echo "Before export path"
-   export PATH="$PATH:./flutter/bin"
-    echo "After export path"
+echo "Build start"
+if [ "$1" == "release" ]; then
+  echo "Build if"
+else
+  echo "Build else"
 fi
-
-#flutter precache
-#flutter doctor
- echo "Before flutter create"
-#flutter create .
-#if [ "$1" == "release" ]; then
-#  flutter analyze
-#else
-#    flutter analyze
-#fi
-#echo "Before flutter test"
 #flutter test
-#result=$?
-#if $result != 0; then
-#  echo "Failed some test cases"
-#  exit 1
-#fi
- exit 0
+echo "Build end"
