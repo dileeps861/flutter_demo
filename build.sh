@@ -15,9 +15,11 @@ echo "Build start"
 #if ! command which flutter &> /dev/null
 #then
   echo "Before git clone"
+  cd ..
    git clone https://github.com/flutter/flutter.git -b stable
     echo "Before export path"
-   export PATH="$PATH:./../flutter/bin"
+   export PATH="$PATH:./flutter/bin"
+   cd kokoro-codelab-dileepshah
     echo "After export path"
 #fi
 if [ "$1" == "release" ]; then
