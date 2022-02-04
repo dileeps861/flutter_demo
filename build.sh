@@ -11,7 +11,11 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-
+git clone https://github.com/flutter/flutter.git -b stable
+flutter precache
+export PATH="$PATH:./flutter/bin"
+flutter doctor
+flutter create .
 if [ "$1" == "release" ]; then
   flutter analyze
   flutter test
