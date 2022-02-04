@@ -27,7 +27,7 @@ else
 fi
 pwd
 flutter create .
-//flutter analyze
+#flutter analyze
 flutter test
 #flutter test
 echo "Build end"
