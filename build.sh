@@ -33,7 +33,8 @@ pwd
 #flutter analyze
 flutter test
 result=$?
-if $result != 0; then
+check=0
+if [ $result -ne $check ]; then
   echo "Failed some test cases"
   exit 1
 fi
