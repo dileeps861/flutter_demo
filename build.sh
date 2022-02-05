@@ -20,7 +20,9 @@ echo "Build start"
    git clone https://github.com/flutter/flutter.git -b stable
     echo "Before export path"
     pwd
+    ls
    export PATH="$PATH:./flutter/bin"
+   echo PATH
    pwd
    cd kokoro-codelab-dileepshah
    pwd
