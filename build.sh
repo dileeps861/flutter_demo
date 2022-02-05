@@ -14,25 +14,21 @@ set -e
 echo "Build start"
 #if ! command which flutter &> /dev/null
 #then
-#  echo "Before git clone"
-#  cd ..
-#  pwd
-#   git clone https://github.com/flutter/flutter.git -b stable
-#    echo "Before export path"
-#    pwd
-#    ls
-#   export PATH="$PATH:/tmpfs/src/github/flutter/bin"
-#   echo $PATH
-#   pwd
-#   cd kokoro-codelab-dileepshah
-#   pwd
-#    echo "After export path"
+  echo "Before git clone"
+  cd ..
+  pwd
+   git clone https://github.com/flutter/flutter.git -b stable
+    echo "Before export path"
+    pwd
+    ls
+   export PATH="$PATH:/tmpfs/src/github/flutter/bin"
+   echo $PATH
+   pwd
+   cd kokoro-codelab-dileepshah
+   pwd
+    echo "After export path"
 #fi
-if [ "$1" == "release" ]; then
-  echo "Build if"
-else
-  echo "Build else"
-fi
+
 pwd
 #flutter analyze
 flutter test
