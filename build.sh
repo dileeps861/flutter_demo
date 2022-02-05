@@ -21,7 +21,7 @@ echo "Build start"
     echo "Before export path"
     pwd
     ls
-   export PATH="$PATH:./flutter/bin"
+   export PATH="$PATH:/tmpfs/src/github/flutter/bin"
    echo $PATH
    pwd
    cd kokoro-codelab-dileepshah
