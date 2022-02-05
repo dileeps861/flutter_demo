@@ -22,7 +22,7 @@ echo "Build start"
     pwd
     ls
    export PATH="$PATH:./flutter/bin"
-   echo PATH
+   echo $PATH
    pwd
    cd kokoro-codelab-dileepshah
    pwd
